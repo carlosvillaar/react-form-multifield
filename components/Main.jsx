@@ -54,6 +54,30 @@ const Main = () => {
                 onChange={handleField}
               />
             </div>
+            <div className="mb-3">
+              <label htmlFor="content" className="form-label">Contenuto</label>
+              <textarea
+                className="form-control"
+                rows="3"
+                placeholder="Inserisci il contenuto"
+                name="content"
+                value={formData.content}
+                onChange={handleField}
+              ></textarea>
+            </div>
+            <div className="mb-3">
+            <select
+              name="category"
+              className="form-select"
+              onChange={handleField}
+              defaultValue=""
+            >
+              <option>Seleziona una categoria</option>
+              {categories.map((category, index) => (
+              <option key={index} value={index}>{category}</option>
+              ))}
+            </select>
+          </div>
               <button type="submit" className="btn btn-primary" >Aggiungi</button>
           </form>
         </div>
