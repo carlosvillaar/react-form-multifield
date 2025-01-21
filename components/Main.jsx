@@ -66,13 +66,13 @@ const Main = () => {
               ></textarea>
             </div>
             <div className="mb-3">
+              <label htmlFor="categories" className="form-label">Seleziona una categoria</label>
             <select
               name="category"
               className="form-select"
               onChange={handleField}
               defaultValue=""
             >
-              <option>Seleziona una categoria</option>
               {categories.map((category, index) => (
               <option key={index} value={index}>{category}</option>
               ))}
